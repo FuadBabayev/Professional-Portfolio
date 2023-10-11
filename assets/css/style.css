@@ -1,0 +1,879 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+.container{
+    max-width: 75%;
+    margin: 0 auto;
+}
+
+/* Navbar Section Start */
+nav{
+    width: 100%;
+    background-color: #8f00e6;
+    position: fixed;
+    z-index: 2;
+}
+#navbar{
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#navbar .logo a{
+    text-decoration: none;
+}
+#navbar .logo img{
+    display: flex;
+    align-items: center;
+    width: 60px;
+    border-radius: 10px;
+}
+nav .menu ul{
+    display: flex;
+    list-style: none;
+    gap: 50px;
+}
+nav .menu ul li a{
+    font: 600 17px/100px "Poppins", sans-serif;
+    text-transform: capitalize;
+    line-height: 40px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    color: #FFF;
+}
+nav h1{
+    font: 900 37px/100px "Poppins", sans-serif;
+    text-transform: capitalize;
+    line-height: 40px;
+    cursor: pointer;
+    color: #FFF;
+}
+/* Navbar Section End */
+
+/* Scroll to Top Section Start */
+.scroll-top{
+    display: none;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 2;
+    border: none;
+    outline: none;
+    background-color: #8f00e6;
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background-color 0.5s, transform 0.1s;
+}
+.scroll-top:hover{
+    background-color: #303030;
+}
+.scroll-top:active{
+    transform: translateY(3px);
+}
+.fa-circle-up{
+    font-size: 35px;
+}
+/* Scroll to Top Section End */
+
+/* Home Section start */
+#home{
+    background-color: #FFF;
+}
+.home-parts{
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    padding-top: 100px;
+}
+.home-part1{
+    width: 100%;
+    overflow: hidden;
+}
+.home-part2{
+    text-align: right;
+    width: 50%;
+    cursor: zoom-in;
+}
+.home-part2 img{
+    width: 100%;
+    border-radius: 50%;
+}
+.home-part1 .prolog{
+    font-size: 30px;
+    font-weight: 500;
+}
+.home-part1 .name{
+    font-size: 55px;
+    font-weight: 700;
+}
+.home-part1 .text{
+    position: relative;
+    font-size: 30px;
+    font-weight: 600;  
+}
+.home-part1 .text.second-text{
+    color: #8f00e6;
+}
+.home-part1 .text.second-text::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #FFF;
+    border-left: 3px solid #8f00e6;
+    animation-name: animate;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(12);
+}
+@keyframes animate {
+    0%{
+        left: 0%;
+    }
+    40%, 60%{
+        left: calc(100% + 4px);
+    }
+    100%{
+        left: 0%;
+    }
+}
+.home-part1-icons{
+    display: flex;
+    gap: 20px;  
+    margin: 30px 0px 10px 30px;
+}
+.home-part1-icons a{
+    color: #8f00e6;
+    text-decoration: none;
+    font-size: 25px;
+    transition: 0.3s;
+}
+.home-part1-icons a:hover{
+    color: #303030;
+    transform: scale(1.5);
+}
+.home-part1-buttons{
+    display: flex;
+    gap: 20px;  
+    margin: 20px 0px;
+}
+.home-part1-buttons button{
+    border: 1px solid transparent;
+    background-color: #8f00e6;
+    font: 600 18px "Poppins",sans-serif;
+    line-height: 2em;
+    letter-spacing: .2em;
+    padding: 12px 45px;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.3s;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 4px 4px 5px #8f00e6;
+    outline: none;
+    border-bottom: 3px solid #520085;
+}
+.home-part1-buttons button a{
+    text-decoration: none;
+}
+.home-part1-buttons button:hover{
+    background-color: #303030;
+}
+.home-part1-buttons button:active{
+    transform: translateY(3px);
+}
+/* Home Section End */
+
+
+/* About Section Start */
+#about{
+    margin: 20px auto 100px auto;
+}
+.about-header{
+    padding-top: 100px;
+    margin: 0px auto 70px;
+    display: flex;
+    justify-content: center;
+}
+.about-header h1{
+    text-decoration: underline;
+    color: #8f00e6;
+    font-size: 40px;
+}
+.about-parts{
+    width: 90%;
+    margin: 0 auto;
+    min-height: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+.about-parts .about-part1{
+    width: 40%;
+}
+.about-parts .about-part1 img{
+    width: 100%;
+    background-size: cover;
+    border-radius: 25px;
+    cursor: zoom-in;
+}
+.about-parts .about-part2{
+    width: 100%;
+}
+.about-parts .about-part2 h1{
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+.about-parts .about-part2 p{
+    font-size: 18px;
+    text-align: justify;
+}
+/* About Section End */
+
+
+/* Skills Section Start */
+#skills{
+    margin: 20px auto 100px auto;
+    padding-bottom: 50px;
+}
+.skills-header{
+    padding-top: 100px;
+    margin: 0px auto 70px;
+    display: flex;
+    justify-content: center;
+}
+.skills-header h1{
+    text-decoration: underline;
+    color: #8f00e6;
+    font-size: 40px;
+}
+.skills-parts{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    min-height: 300px;
+}
+.skills-parts .skills-part1{
+    width: 50%;
+}
+.skills-parts .skills-part2{
+    width: 50%;
+}
+.skills-parts .skills-part2 img{
+    width: 100%;
+    background-size: cover;
+    border-radius: 25px;
+    cursor: zoom-in;
+    height: 100%;
+}
+.skills-data{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 8px 16px;
+    border-radius: 10px;
+    border-bottom-left-radius: 1px !important;
+    box-shadow: -2px 4px 15px #ab58db;
+    margin-bottom: 20px;
+}
+.skills-logo-name{
+    display: flex;
+    align-items: center;
+}
+.skills-logo-name span{
+    font-size: 18px;
+    font-weight: 500;
+}
+.skills-data i{
+    font-size: 36px;
+}
+.skills-bar{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: #8f00e6;
+    height: 5px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.skills-html{
+    width: 95%;
+}
+.fa-html5{
+    color: #dd4b25;
+    margin-right: 24px;
+}
+.skills-css{
+    width: 90%;
+}
+.fa-css3-alt{
+    color: #254bdd;
+    margin-right: 24px;
+}
+.skills-bootstrap{
+    width: 80%;
+}
+.fa-bootstrap{
+    color: #7912f3;
+    margin-right: 20px;
+}
+.skills-js{
+    width: 85%;
+}
+.fa-square-js{
+    color: #efd81d;
+    margin-right: 20px;
+}
+.skills-git{
+    width: 80%;
+}
+.fa-git-alt{
+    color: #e84e31;
+    margin-right: 18px;
+}
+.skills-react{
+    width: 80%;
+}
+.fa-react{
+    color: #5ed3f3;
+    margin-right: 15px;
+}
+.skills-php{
+    width: 60%;
+}
+.fa-php{
+    color: #7377ad;
+    margin-right: 8px;
+}
+/* Skills Section Start */
+
+/* About Section Start */
+#project{
+    margin: 20px auto 100px auto;
+}
+.project-header{
+    padding-top: 100px;
+    margin: 0px auto 70px;
+    display: flex;
+    justify-content: center;
+}
+.project-header h1{
+    text-decoration: underline;
+    color: #8f00e6;
+    font-size: 40px;
+}
+.project-parts{
+    width: 90%;
+    margin: 0 auto;
+    min-height: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+.project-parts .project-part1{
+    width: 80%;
+}
+.project-parts .project-part1 img{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    border-radius: 20px;
+    cursor: zoom-in;
+}
+.project-parts .project-part2{
+    width: 100%;
+}
+.project-parts .project-part2 h1{
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+.project-parts .project-part2 p{
+    font-size: 18px;
+    text-align: justify;
+}
+.project-parts .project-part2 a{
+    color: #8f00e6;
+    font-weight: 600;
+    text-decoration: underline;
+}
+/* About Section End */
+
+
+/* Work Section Start */
+#work{
+    margin: 20px auto 100px auto;
+    padding-bottom: 60px;
+}
+.work-header{
+    padding-top: 100px;
+    margin: 0px auto 30px;
+    display: flex;
+    justify-content: center;
+}
+.work-header h1{
+    text-decoration: underline;
+    color: #8f00e6;
+    font-size: 40px;
+}
+.work-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 30px;
+}   
+.work-img{
+  box-shadow: 0 4px 25px rgba(14,36,49,.15);
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: zoom-in;
+}
+.work-img img{
+  transition: 1s;
+  width: 100%;
+  height: 100%;
+}
+.work-img img:hover{
+  transform: scale(1.3);
+}
+/* Work Section End */
+
+
+/* Contact Section Start */
+#contact{
+    margin: 20px auto 100px auto;
+    padding-bottom: 30px;
+}
+.contact-header{
+    padding-top: 100px;
+    margin: 0px auto 30px;
+    display: flex;
+    justify-content: center;
+}
+.contact-header h1{
+    text-decoration: underline;
+    color: #8f00e6;
+    font-size: 40px;
+}
+.registration{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 40%;
+    margin: auto;
+}
+.registration-input{
+    margin-bottom: 10px;
+}
+.registration form input{
+    width: 100%;
+    border: 1px solid #8f00e6;
+    outline: none;
+    background-color: #fff;
+    font-size: 15px;
+    color: black;
+    line-height: 18px;
+    padding: 12px 50px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.registration form input::placeholder{
+    background-color: #fff;
+    font-size: 15px;
+    color: #7b7b7b;
+    line-height: 18px;
+}
+.registration form input:focus{
+    border-color: #8f00e6;
+    box-shadow: 0 0 8px 0 #8f00e6;
+}
+.registration form input:focus + i{
+    color: #8f00e6;
+}
+.registration form div{
+    position: relative;
+    cursor: pointer;
+}
+.registration form div i{
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 25px;
+    padding: 9.5px;
+    color: #7b7b7b;
+    transition: 0.6s;
+}
+.registration form div:nth-child(3){
+    position: relative;
+}
+.registration form div:nth-child(3) section{    
+    position: absolute;
+    right: 50px;
+    top: 0;
+    cursor: pointer;
+}
+textarea{
+    width: 100%;
+    height: 250px;
+    resize: none;
+    border: 1px solid #8f00e6;
+    outline: none;
+    background-color: #fff;
+    font-size: 15px;
+    color: #7b7b7b;
+    line-height: 18px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.2s;
+    padding: 12px 0px 0px 50px;
+}
+textarea:focus{
+    border-color: #8f00e6;
+    box-shadow: 0 0 8px 0 #8f00e6;
+}
+textarea:focus + i{
+    color: #8f00e6 !important;
+}
+.registration-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+}
+.registration-button button{
+    border: 1px solid transparent;
+    background-color: #8f00e6;
+    font: 600 18px "Poppins",sans-serif;
+    line-height: 2em;
+    letter-spacing: .2em;
+    padding: 12px 85px;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.3s;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 4px 4px 5px #8f00e6;
+    outline: none;
+    border-bottom: 3px solid #520085;
+}
+.registration-button button a{
+    text-decoration: none;
+}
+.registration-button button:hover{
+    background-color: #303030;
+}
+.registration-button button:active{
+    transform: translateY(3px);
+}
+/* Contact Section End */
+
+/* Footer Section Start */
+footer{
+    background-color: #161616;
+    padding: 30px 0;
+}
+#footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+footer .footer-logo img{
+    display: flex;
+    align-items: center;
+    width: 60px;
+    border-radius: 10px;
+}
+.footer-icons{
+    display: flex;
+    gap: 20px;
+}
+.footer-icons a{
+    color: #FFF;
+    text-decoration: none;
+    font-size: 25px;
+    transition: 0.3s;
+}
+.footer-icons a:hover{
+    color: #8f00e6;
+}
+footer hr{
+    width: 90%;
+    margin: 3px auto;
+    border-radius: 5px;
+    padding-top: 2px;
+    border: none;
+    background-color: #FFF; 
+}
+footer p{
+    color: #fff;
+    padding-bottom: 10px;
+    font-size: 17px;
+}
+footer p a{
+    color: #aaaaaa;
+    text-decoration: none;
+    transition: 0.5s;
+}
+footer p a:hover{
+    color: #8f00e6;
+}
+/* Footer Section End */
+
+
+/* Responsive Menu Section Start */
+.responsive-bar{
+    font-size: 30px;
+    color: #FFF;
+    cursor: pointer;
+    display: none;
+}
+.responsive{
+    display: flex;
+    justify-content: center;   
+    /* align-items: center;  */
+    padding-top: 100px;
+    min-width: 200px;
+    background-color: #8f00e6;
+    position: fixed;
+    top: 0;
+    right: -200px;
+    height: 100vh;
+    overflow: hidden;
+    transition: 1s;
+    z-index: 7;
+}
+.cancel-logo{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+.cancel-logo i{
+    font-size: 30px;
+    color: #FFF;
+    cursor: pointer;
+    transition: 1s;
+}
+.responsive-menu ul{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 20px;
+}
+.responsive-menu ul li a{
+    font: 600 17px/100px "Poppins", sans-serif;
+    text-transform: capitalize;
+    line-height: 40px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    color: #FFF;
+}
+/* Responsive Menu Section End */
+
+
+
+/* Responsive Layout Start */
+@media only screen and (max-width:768px) {
+    .scroll-top{
+        padding: 5px;
+    }
+    nav .menu{
+        display: none;
+    }
+    nav .responsive-bar{
+        display: block;
+    }
+    #home{
+        padding-top: 25px;
+    }
+    .home-part1 .prolog{
+        font-size: 9vw;
+        font-weight: 500;
+        margin: 10px auto;
+        display: flex;
+   
+    }
+    .home-part1 .name{
+        font-size: 12vw;
+        font-weight: 700;
+        line-height: 70px;
+        margin: 10px auto;
+        display: flex;
+        justify-content: center;
+    }
+    .home-part1 .text{
+        font-size: 4.7vw;
+        font-weight: 600;
+    }
+    .home-part1-span{
+        display: flex;
+        justify-content: flex-start;
+    }
+    .home-part1-icons{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        margin: 30px auto;
+    }
+    .home-part1-icons a{
+        font-size: 9vw;
+    }
+    .home-part1-buttons{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;  
+        margin: 30px auto;
+    }
+    .home-part1-buttons button{
+        font: 600 3.5vw "Poppins",sans-serif;
+        padding: 2.5vh 17vw;
+    }
+    .home-parts{
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .home-parts .home-part1{
+        width: 100%;
+    }
+    .home-parts .home-part2{
+        display: none;
+    }
+    .about-parts{
+        width: 100%;
+        flex-direction: column;
+    }
+    .about-parts .about-part1, .about-parts .about-part2{
+        width: 100%;
+    }
+    .skills-parts .skills-part1, .skills-parts .skills-part2{
+        width: 100%;
+    }
+    .skills-parts{
+        width: 100%;
+        flex-direction: column-reverse;
+    }
+    .project-parts{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 50px;
+    }  
+    #work{
+        margin: 20px auto;
+    }
+    .work-container{
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+    }
+    #contact{
+        margin: 20px auto;
+    }
+    .registration{
+        max-width: 90%;
+    }
+    footer p{
+    font-size: 12px;
+    }
+}
+
+
+@media only screen and (min-width:769px) and (max-width:992px){
+    nav .menu{
+        display: block;
+    }
+    .responsive{
+        display: none;
+    }
+    .scroll-top{
+        padding: 8px;
+    }
+    nav .menu ul{
+        gap: 25px;
+    }
+    .home-part1-buttons button{
+        font: 500 16px "Poppins",sans-serif;
+        padding: 15px 45px;
+    }
+    .home-parts{
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .home-parts .home-part1{
+        width: 100%;
+    }
+    .home-parts .home-part2{
+        display: none;
+    }
+    .about-parts{
+        width: 100%;
+        flex-direction: column;
+    }
+    .about-parts .about-part1, .about-parts .about-part2{
+        width: 100%;
+    }
+    .skills-parts .skills-part1, .skills-parts .skills-part2{
+        width: 100%;
+    }
+    .skills-parts{
+        width: 100%;
+        flex-direction: column-reverse;
+    }
+    .project-parts{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 50px;
+    }  
+    #work{
+        margin: 20px auto;
+    }
+    .work-container{
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+    }
+    #contact{
+        margin: 20px auto;
+    }
+    .registration{
+        max-width: 90%;
+    }
+    footer p{
+    font-size: 12px;
+    }
+
+    
+}
+/* Responsive Layout End */
